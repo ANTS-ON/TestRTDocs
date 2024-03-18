@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.4)
-project(TestRTD ocs
+project(TestRTD
         VERSION 1.0.0
 	DESCRIPTION "blabla"
-        LANGUAGES NONE)
+	LANGUAGES NONE)
+
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(Doxygen REQUIRED dot)
 

@@ -9,6 +9,7 @@ Welcome to TestRTDocs's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
    api/reference.rst
 
 Indices and tables
