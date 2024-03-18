@@ -1,0 +1,24 @@
+version: 2
+
+python:
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        - sphinx
+        - breathe
+        - exhale
+        - myst-parser
+        - sphinx-book-theme
+
+build:                                   
+  apt_packages:
+    - cmake
+    - doxygen
+  commands:
+    - mkdir build        
+    - cd build
+    - cmake .. -DCMAKE_PREFIX_PATH=/usr/local -DBUILD_LIB=OFF -DBUILD_DOCUMENTATION=ON         
+    - cd ../docs 
+    - make html
+    - cp -r build/html $READTHEDOCS_OUTPUT/html/  
