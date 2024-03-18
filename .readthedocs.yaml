@@ -11,7 +11,8 @@ python:
         - myst-parser
         - sphinx-book-theme
 
-build:                                   
+build:
+  - os: ubuntu-22.04 
   apt_packages:
     - cmake
     - doxygen
