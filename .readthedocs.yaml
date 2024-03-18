@@ -12,11 +12,9 @@ python:
         - sphinx-book-theme
 
 build:
-  os: ubuntu-22.04 
-  apt_packages:
-    - cmake
-    - doxygen
+  os: ubuntu-22.04
   commands:
+    - apt install -y cmake doxygen
     - mkdir build        
     - cd build
     - cmake .. -DCMAKE_PREFIX_PATH=/usr/local -DBUILD_LIB=OFF -DBUILD_DOCUMENTATION=ON         
