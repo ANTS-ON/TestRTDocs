@@ -1,4 +1,4 @@
-name: moovie-docs
+name: build
 channels:
   - conda-forge
   - anaconda
