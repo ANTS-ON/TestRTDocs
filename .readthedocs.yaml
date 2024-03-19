@@ -19,7 +19,7 @@ build:
   tools:
     python: "mambaforge-22.9"
   commands:
-    - ls
+    - pwd
     - conda env create --name build --file environment.yaml
     - conda init bash
     - conda activate build
