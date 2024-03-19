@@ -19,5 +19,7 @@ build:
     - pip install sphinx exhale myst-parser sphinx-book-theme
     - sed s,\${PROJECT_SOURCE_DIR},$(pwd),g Doxyfile.in > Doxyfile
     - doxygen Doxyfile
-    - cd docs && pwd && make html
+    - cd docs && make html
+    - pwd
+    - ls -R .
     - cp -r build/html $READTHEDOCS_OUTPUT/html/  
