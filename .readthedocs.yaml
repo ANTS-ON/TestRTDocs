@@ -16,6 +16,6 @@ build:
   commands:
     - sed s/\${PROJECT_SOURCE_DIR}/$(pwd | sed 's/\//\\\//g')/g Doxyfile.in > Doxyfile
     - doxygen -g Doxyfile
-    - cd ../docs
+    - cd docs
     - make html
     - cp -r build/html $READTHEDOCS_OUTPUT/html/  
