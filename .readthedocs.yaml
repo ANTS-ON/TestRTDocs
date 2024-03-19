@@ -20,4 +20,4 @@ build:
     - sed s,\${PROJECT_SOURCE_DIR},$(pwd),g Doxyfile.in > Doxyfile
     - doxygen Doxyfile
     - cd docs && make html
-    - cp -r docs/build/html/* ${READTHEDOCS_OUTPUT}html/  
+    - cp -r docs/build/html ${READTHEDOCS_OUTPUT}  
