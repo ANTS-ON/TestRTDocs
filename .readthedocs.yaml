@@ -16,6 +16,8 @@ build:
 #  tools:
 #    python: "3.12"
   commands:
+    - pwd
+    - echo $(pwd | sed 's/\//\\\//g')
     - sed s/\${PROJECT_SOURCE_DIR}/$(pwd | sed 's/\//\\\//g')/g Doxyfile.in
     - echo "s/\${PROJECT_SOURCE_DIR}/$(pwd | sed 's/\//\\\//g')/g"
     - pip install sphinx exhale myst-parser sphinx-book-theme
