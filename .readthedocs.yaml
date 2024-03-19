@@ -13,12 +13,11 @@ python:
 
 build:
   os: ubuntu-22.04
-#  tools:
-#    python: "3.12"
+  tools:
+    python: "3.12"
   commands:
-    - sed s,\${PROJECT_SOURCE_DIR},$(pwd),g Doxyfile.in
     - pip install sphinx exhale myst-parser sphinx-book-theme
-    - sed s/\${PROJECT_SOURCE_DIR}/$(pwd | sed 's/\//\\\//g')/g Doxyfile.in > Doxyfile
+    - sed s,\${PROJECT_SOURCE_DIR},$(pwd),g Doxyfile.in > Doxyfile
     - doxygen Doxyfile
     - cd docs && pwd && make html
     - cp -r build/html $READTHEDOCS_OUTPUT/html/  
