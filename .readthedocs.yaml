@@ -17,7 +17,7 @@ build:
 #    python: "3.12"
   commands:
     - pwd
-    - echo $(pwd | sed 's,/,\/,g')
+    - echo $(pwd | sed 's,\/,\\/,g')
     - echo $(pwd | sed -r s/\//\\\//g)
     - echo $(pwd | sed -r 's/\//\\\//g')  
     - echo $(pwd | sed 's/\//\\\//g')
