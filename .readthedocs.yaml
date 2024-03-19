@@ -13,8 +13,15 @@ python:
 
 build:
   os: ubuntu-22.04
+  tools:
+    python: "mambaforge-22.9"
+
+conda:
+  environment: environment.yaml
+
+build:
   commands:
-    - apt install -y cmake doxygen
+    - sed 's/\$\{PROJECT_SOURCE_DIR\}/$(pwd)/g' Doxyfile.in
     - mkdir build        
     - cd build
     - cmake .. -DCMAKE_PREFIX_PATH=/usr/local -DBUILD_LIB=OFF -DBUILD_DOCUMENTATION=ON         

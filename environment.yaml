@@ -1,0 +1,7 @@
+name: moovie-docs
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - anaconda::cmake
+  - conda-forge::doxygen
