@@ -20,6 +20,7 @@ build:
     python: "mambaforge-22.9"
   commands:
     - conda env create --name build --file environment.yaml
+    - conda init bash
     - conda activate build
     - mkdir build        
     - cd build
